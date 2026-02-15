@@ -250,7 +250,7 @@ void initialize_gl4es() {
         break;
     }
 
-    GetHardwareExtensions(gl4es_notest);
+   // GetHardwareExtensions(gl4es_notest);
 
 #if !defined(NO_LOADER) && !defined(NO_GBM)
     if(globals4es.usegbm)
