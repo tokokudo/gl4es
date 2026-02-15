@@ -231,6 +231,7 @@ install(FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/../include/gl4eshint.h
     DESTINATION include/gl4es
 )
+endif()
 
 SET(EGL_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/egl/egl.c
