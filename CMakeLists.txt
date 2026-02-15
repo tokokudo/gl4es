@@ -122,6 +122,11 @@ if(USE_ANDROID_LOG)
     find_library(log-lib log)
 endif()
 
+# Force disable Android when building on Termux
+if(TERMUX)
+    set(ANDROID OFF CACHE BOOL "" FORCE)
+endif()
+
 if(TERMUX)
     add_definitions(-DNO_GBM -DDEFAULT_ES=2)
 endif()
