@@ -112,7 +112,7 @@ if(GOA_CLONE)
 endif()
 
 # Android
-if(ANDROID)
+if(ANDROID AND NOT TERMUX)
     add_definitions(-DANDROID)
     add_definitions(-DNOX11 -DNO_GBM -DDEFAULT_ES=2)
 endif()
