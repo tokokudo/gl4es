@@ -224,14 +224,13 @@ else()
         set_target_properties(GL PROPERTIES SUFFIX ".so.1")
     endif()
     install(TARGETS GL
-      LIBRARY
-      DESTINATION "@TERMUX_PREFIX@/lib/gl4es/"
-    )
-    install(FILES "../include/gl4esinit.h" "../include/gl4eshint.h"
-      DESTINATION "@TERMUX_PREFIX@/include/gl4es/"
-    )
-endif()
-
+    LIBRARY DESTINATION lib/gl4es
+)
+install(FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include/gl4esinit.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include/gl4eshint.h
+    DESTINATION include/gl4es
+)
 
 SET(EGL_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/egl/egl.c
